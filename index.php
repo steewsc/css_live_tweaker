@@ -21,7 +21,17 @@
       </header>
       
       <div id="mainContent">
-      
+	<div class="sidebar left">
+	  <ul>
+	    <li>Item 1</li>
+	    <li>Item 2</li>
+	    <li>Item 3</li>
+	    <li>Item 4</li>
+	  </ul>
+	  <div class="banner">
+	    Banner
+	  </div>
+	</div>
       </div>
       
       <footer>
