@@ -1,15 +1,31 @@
 <?php
-  session_start();
-  // Sledeca linija proverava da li je korsnik vec ulogovan ili ne,
-  // tj. da li je TOKEN snimljen u $_SESSION
-  if(isset($_SESSION['token'])){
-    echo 'Korisnik je vec ulogovan, a token je: ' . $_SESSION['token'];
-  } else {
-    // ovde treba da prikaze login stranu ili da uradi redirect na nju.
-    // login strana treba isto kao i ova da za prvu liniju ima session_start();
-    //	pa posle sve ostalo.
-    // I kada se korisnik uloguje, tj. kad ti API vrati njegov TOKEN uradis sledece:
-    $_SESSION['token'] = "dhfjdshfjhkdshkjhfdhskjfdsj";
-    //"dhfjdshfjhkdshkjhfdhskjfdsj" je token, koji je API vratio.
-  }
+
 ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Live CSS Tweaker plugin</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="pageWrapper">
+      <header>
+	<ul>
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#">About</a></li>
+	  <li><a href="#">Download</a></li>
+	  <li><a href="#">Author</a></li>
+	  <li><a href="#">Contact</a></li>
+	</ul>
+      </header>
+      
+      <div id="mainContent">
+      
+      </div>
+      
+      <footer>
+      </footer>
+    </div>
+  </body>
+</html>
