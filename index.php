@@ -1,5 +1,5 @@
 <?php
-
+    include('functions.php')
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,6 +7,17 @@
     <meta charset="utf-8">
     <title>Live CSS Tweaker plugin</title>
     <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/test.css">
+    <script type="text/javascript" src="js/jquery/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript">
+        var objCss = { files: new Array()};
+        
+        $(document).ready(function(){
+            $('[type$="text/css"]').each( function(){
+                objCss.files.push( $(this).attr("href") );
+            });
+        });
+    </script>
   </head>
   <body>
     <div id="pageWrapper">
@@ -18,8 +29,7 @@
 	  <li><a href="#">Author</a></li>
 	  <li><a href="#">Contact</a></li>
 	</ul>
-      </header>
-      
+      </header>      
       <div id="mainContent">
 	<div class="sidebar left">
 	  <ul>
