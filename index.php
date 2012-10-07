@@ -1,6 +1,3 @@
-<?php
-    include('functions.php')
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,15 +6,7 @@
     <link type="text/css" rel="stylesheet" href="css/main.css">
     <link type="text/css" rel="stylesheet" href="css/test.css">
     <script type="text/javascript" src="js/jquery/jquery-1.6.4.min.js"></script>
-    <script type="text/javascript">
-        var objCss = { files: new Array()};
-        
-        $(document).ready(function(){
-            $('[type$="text/css"]').each( function(){
-                objCss.files.push( $(this).attr("href") );
-            });
-        });
-    </script>
+    <script type="text/javascript" src="js/csstweaker.js"></script>
   </head>
   <body>
     <div id="pageWrapper">
