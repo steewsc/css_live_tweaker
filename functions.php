@@ -10,9 +10,9 @@
             $result["counter"] = count($tmpJSON);
             for( $i = 0; $i < count( $tmpJSON ); $i++ ){
                 $result["content_".$i] = "";
-                $currFile = explode("\n", str_replace('"', '\'', str_replace(';;', ';', file_get_contents( reset( $tmpJSON ) ) ) ) );
-                if( count( $currFile ) < 1 ){
-                    $currFile = explode("\r\n", str_replace('"', '\'', str_replace(';;', ';', file_get_contents( reset( $tmpJSON ) ) ) ) );
+                $currFile = explode("\r\n", str_replace('"', '\'', str_replace(';;', ';', file_get_contents( reset( $tmpJSON ) ) ) ) );
+                if( count( $currFile ) <= 1 ){
+                    $currFile = explode("\n", str_replace('"', '\'', str_replace(';;', ';', file_get_contents( reset( $tmpJSON ) ) ) ) );
                 }
                 $commentFlag = false;
                 for( $f = 0; $f < count( $currFile ); $f++ ){
@@ -30,9 +30,9 @@
         } else {
             $result["counter"] = 1;
             $result["content_0"] = "";
-                $currFile = explode("\n", str_replace('"', '\'', str_replace(';;', ';', file_get_contents( reset( $tmpJSON ) ) ) ) );
-                if( count( $currFile ) < 1 ){
-                    $currFile = explode("\r\n", str_replace('"', '\'', str_replace(';;', ';', file_get_contents( reset( $tmpJSON ) ) ) ) );
+                $currFile = explode("\r\n", str_replace('"', '\'', str_replace(';;', ';', file_get_contents( reset( $tmpJSON ) ) ) ) );
+                if( count( $currFile ) <= 1 ){
+                    $currFile = explode("\n", str_replace('"', '\'', str_replace(';;', ';', file_get_contents( reset( $tmpJSON ) ) ) ) );
                 }
                 $commentFlag = false;
                 for( $f = 0; $f < count( $currFile ); $f++ ){      
