@@ -50,6 +50,5 @@ $(document).ready(function(){
     });
     objCss.files.getContent();
     objCss.objects.prepare();
-    console.log("Klikni ispod :-) ");
     console.log(objCss);
 });
